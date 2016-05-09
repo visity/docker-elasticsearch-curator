@@ -1,6 +1,6 @@
 FROM	python:2.7
 
-RUN pip install elasticsearch-curator==3.2.3
+RUN pip install elasticsearch-curator==3.5
 
 ENV INTERVAL_IN_HOURS=24
 ENV OLDER_THAN_IN_DAYS="20"
