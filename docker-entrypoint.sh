@@ -16,8 +16,8 @@ then
     response=$(wget -qO- http://${master}:9200/_cat/master)
     if [ "$?" -eq 0 ]
     then
-      ELASTICSEARCH_URL=http://$(echo $response | awk '{printf $NF}'):9200
-      echo "Master found: $ELASTICSEARCH_URL"
+      ELASTICSEARCH_HOST=http://$(echo $response | awk '{printf $NF}'):9200
+      echo "Master found: $ELASTICSEARCH_HOST"
       break
     fi
   done
