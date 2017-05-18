@@ -16,7 +16,7 @@ then
     response=$(wget -qO- http://${master}:9200/_cat/master)
     if [ "$?" -eq 0 ]
     then
-      ELASTICSEARCH_HOST=http://$(echo $response | awk '{printf $NF}'):9200
+      ELASTICSEARCH_HOST=$(echo $response | awk '{printf $NF}')
       echo "Master found: $ELASTICSEARCH_HOST"
       break
     fi
