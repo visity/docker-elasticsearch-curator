@@ -4,7 +4,7 @@ This only job executed by the docker built from this repository is to clean the 
 
 It can be run as follows:
 
-	docker run -d -e INTERVAL_IN_HOURS=24 -e OLDER_THAN_IN_DAYS="10" -e ELASTICSEARCH_HOST="localhost:9200" visity/elasticsearch-curator
+	docker run -d -e INTERVAL_IN_HOURS=24 -e OLDER_THAN_IN_DAYS="10" -e ELASTICSEARCH_HOST="localhost" visity/elasticsearch-curator
 	
 * **INTERVAL\_IN\_HOURS**: The amount of time between two curator runs
 * **OLDER\_THAN\_IN\_DAYS**: Indicates all logs with a date exceeding this age can be deleted.
