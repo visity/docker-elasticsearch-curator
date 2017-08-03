@@ -9,7 +9,7 @@ fi
 
 # Step down via gosu  
 if [ "$1" = 'curator' ]; then
-	exec gosu curator bash -c "while true; do curator --host $ELASTICSEARCH_HOST delete indices --older-than $OLDER_THAN_IN_DAYS --time-unit=days --timestring '%Y.%m.%d'; set -e; sleep $(( 60*60*INTERVAL_IN_HOURS )); set +e; done"
+	exec gosu curator bash -c "while true; do curator --config /config.yml /action.yml; set -e; sleep $(( 60*60*INTERVAL_IN_HOURS )); set +e; done"
 fi
 
 # As argument is not related to curator,
