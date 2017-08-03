@@ -1,0 +1,14 @@
+ctions:
+  1:
+    action: delete_indices
+    description: delete indices
+    filters:
+    -
+      filtertype: age
+      source: name
+      direction: older
+      timestring: '%Y.%m.%d'
+      unit: days 
+      unit_count: 1
+      exclude:
+
