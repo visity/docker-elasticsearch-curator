@@ -10,4 +10,5 @@ It can be run as follows:
 * **OLDER\_THAN\_IN\_DAYS**: Indicates all logs with a date exceeding this age can be deleted.
 * **ELASTICSEARCH\_HOST**: Points to the elasticsearch master url
 * **ELASTICSEARCH\_MASTERS**: Optionally, other than ELASTICSEARCH\_HOST, a list of hosts can be provided here and the master will be chosen amongst them
+* **ELASTICSEARCH\_PORT**: Port to access elasticsearch. It defaults to 9200
 
